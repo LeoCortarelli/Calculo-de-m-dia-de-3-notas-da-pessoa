@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Media do aluno</title>
+</head>
+<body>
+    <h2>Calculando a media do aluno</h2>
+
+    <label>Digite o nome do aluno</label><br>
+    <input type="text" id="nome">
+
+    <br>
+    <br>
+
+    <label>Digite a primeira nota do aluno</label><br>
+    <input type="number" id="nota1">
+
+    <br>
+    <br>
+
+    <label>Digite a segunda nota do aluno</label><br>
+    <input type="number" id="nota2">
+
+    <br>
+    <br>
+
+    <label>Digite a terceira nota do aluno</label><br>
+    <input type="number" id="nota3">
+
+    <BR>
+    <BR>
+
+        <input type="button" value="Calcular" onclick="calcular()">
+    <br>
+    <br>    
+
+        <h1 id="resposta"></h1>
+
+
+        <script>
+            function calcular(){
+               const not1 = document.getElementById("nota1").value
+               const not2 = document.getElementById("nota2").value
+               const not3 = document.getElementById("nota3").value
+
+               const intN1 = parseInt(not1)
+               const intN2 = parseInt(not2)
+               const intN3 = parseInt(not3)
+
+               const resposta = (intN1 + intN2 + intN3) / 3
+
+               document.getElementById("resposta").innerHTML = resposta
+            }
+        </script>
+</body>
+</html>
